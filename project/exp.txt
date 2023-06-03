@@ -1,0 +1,6 @@
+JFrame frame = new JFrame();
+
+acc_num
+
+frame.dispose();
+            homePage obj = new homePage(acc_num);

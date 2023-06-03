@@ -1,0 +1,37 @@
+ create table regtab(username varchar(20),Acc_type varchar(20),Acc_num int(6) AUTO_INCREMENT,DOB varchar(10),ph_num int(10),email_id varchar(30),pass varchar(20),pin int(4),lamo long,PRIMARY KEY (Acc_num));
+
+
+insert into regtab (username , Acc_type, DOB,ph_num,email_id,pass,pin) values('navi_04','saving account','04/04/2004',8605083060,'abc@gmail.com','N@vi0404',2004);
+
+Bank Transfer Table 
+
+create table banktan(acc_num int(6),Toaccnum int(6),bankname varchar(20),sentamo long,Date varchar(15),FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+Recharge Table
+
+create table recharge(acc_num int(6),card_name varchar(20),mobile_num long, Recharge_Date Date,amount long,FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+
+Electicity Bill Table
+
+create table Elecbill(acc_num int(6),company varchar(20),customer_id long,Pay_Date varchar(10), amount long,FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+DTH Table 
+
+
+ create table dbill(acc_num int,company varchar(20),DTH_ID long,pay_date varchar(10),pay_amo long,FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+
+Credit Card Table 
+create table CCbill(acc_num int(6),card_no long,Pay_Date varchar(10), amount long,FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+
+
+
+UPI id
+create table upi(acc_num int,id varchar(15),amount long,pay_date varchar(10),FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));
+
+
+
+credit card
+create table credit(acc_num int,card_num long,amount long,pay_date varchar(10),FOREIGN KEY(acc_num) REFERENCES regtab(Acc_num));

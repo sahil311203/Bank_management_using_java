@@ -1,0 +1,1 @@
+setResizable(false);

@@ -1,0 +1,6 @@
+import java.util.Date;
+
+long mob=Long.parseLong(t1.getText());
+                Date date = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                String rcdate = formatter.format(date);
